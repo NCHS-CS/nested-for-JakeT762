@@ -29,7 +29,7 @@ public class App {
             System.out.println();
         } */
 
-        for (int num = 1; num <= 5; num++) {
+        /*for (int num = 1; num <= 5; num++) {
             for (int dot1 = 5 - num; dot1 > 0; dot1--) {
                 System.out.print(".");
             }
@@ -41,6 +41,29 @@ public class App {
             }
 
             System.out.println();
+        } */
+
+        for (int big_num = 1; big_num < 19; big_num++) {
+            for (int space = 9 - (big_num % 10); space > 0 && big_num < 10; space--) {
+                System.out.print(" ");
+            }
+
+            for (int time1 = (big_num % 10) * 2; time1 > 0 && big_num < 10; time1--) {
+                System.out.print(big_num % 10);
+            }
+
+            for (int space2 = (big_num % 10); space2 > 0 && big_num > 10; space2--) {
+                System.out.print(" ");
+            }
+
+            for (int time2 = Math.abs(((big_num - ((big_num % 10) * 2)) - 1) * 2); time2 > 0 && big_num > 10; time2--) {
+                System.out.print(big_num - ((big_num % 10) * 2) - 1);
+            }
+
+            if (big_num != 10) {
+                System.out.println();
+            }
         }
+        
     }
 }
